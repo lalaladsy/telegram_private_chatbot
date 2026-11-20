@@ -14,6 +14,7 @@ export default async function handler(request) {
       process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN
     ),
     BOT_TOKEN: process.env.BOT_TOKEN,
+    OWNER_ID: process.env.OWNER_ID || "",
     SUPERGROUP_ID: process.env.SUPERGROUP_ID,
     ADMIN_IDS: process.env.ADMIN_IDS || "",
     API_BASE: process.env.API_BASE || "",
