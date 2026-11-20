@@ -10,8 +10,8 @@ export const config = { runtime: "edge" };
 export default async function handler(request) {
   const env = {
     TOPIC_MAP: createKV(
-      process.env.UPSTASH_REDIS_REST_URL,
-      process.env.UPSTASH_REDIS_REST_TOKEN
+      process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL,
+      process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN
     ),
     BOT_TOKEN: process.env.BOT_TOKEN,
     SUPERGROUP_ID: process.env.SUPERGROUP_ID,
